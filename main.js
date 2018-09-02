@@ -88,7 +88,7 @@ const backButton = () => {
 
 $('#back-button').on('click', backButton);
 
-/***** Password Validation *****/
+/****************** Password Validation ******************/
 const first = $('.grade1');
 const second = $('.grade2');
 const third = $('.grade3');
@@ -97,7 +97,7 @@ const fifth = $('.grade5');
 const sixth = $('.grade6');
 
 const gradeArray = [first, second, third, fourth, fifth, sixth];
-console.log(gradeArray);
+
 const passwords = {
     firstgrade: 'FirstGrade',
     secondgrade: 'SecondgrAde',
@@ -107,13 +107,8 @@ const passwords = {
     sixthgrade: 'SiXThgRade'
 };
 
-
-//console.log(passwords.firstgrade);
-
 const passwordPopUp = (event) => {
-    console.log('clicked');
     let gradeLevel = $(event.target).attr('class');
-    console.log(gradeLevel);
 
     const password = prompt('Please enter the password your teacher gave you.', '');
 
@@ -143,6 +138,7 @@ const requirePassword = () => {
         classPassword.on('click', passwordPopUp);
     }
 }
+/////////////////////////////////////////////////////////////////////
 
 
 

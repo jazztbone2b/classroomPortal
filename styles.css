@@ -72,12 +72,42 @@ h1 {
     transform: rotate(45deg) translate(-8px, -8px);
 }
 /***********************************************************/
+#main-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
 h2 {
     text-align: center;
 }
 
-/****** Main Page Flex Container ******/
+#enter-button {
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    height: 50px;
+    font-size: 20px;
+    color: black;
+    box-shadow: 1px 3px 3px gray;
+    background-color: #2196f3;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+#enter-button > a {
+    color: white;
+}
+
+#enter-button:hover {
+    background-color: #f9a825;
+    transition: 0.3s;
+    cursor: pointer;
+    font-size: 28px;
+    height: 75px;
+}
+
+/****** Class Page Flex Container ******/
 #container {
     display: flex;
     margin-top: 40px;
@@ -112,6 +142,8 @@ h2 {
     transition: 0.3s;
     box-shadow: 2px 4px 4px 2px gray;
     font-size: 28px;
+    width: 225px;
+    height: 225px;
 }
 
 #class-list {
@@ -163,9 +195,22 @@ h2 {
 }
 
 @media screen and (max-width: 600px) {
+    #enter-button {
+        font-size: 18px;
+    }
+
+    #enter-button:hover {
+        font-size: 18px;
+    }
+    
     #box {
         width: 150px;
         height: 150px;
+    }
+
+    #box:hover {
+        width: 175px;
+        height: 175px;
     }
 
     #back-button {
