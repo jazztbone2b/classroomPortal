@@ -89,11 +89,48 @@ const backButton = () => {
 $('#back-button').on('click', backButton);
 
 /***** Password Validation *****/
+const first = $('.grade1');
+const second = $('.grade2');
+const third = $('.grade3');
+const fourth = $('.grade4');
+const fifth = $('.grade5');
+const sixth = $('.grade6');
+
+const gradeArray = [first, second, third, fourth, fifth, sixth];
+console.log(gradeArray);
+const passwords = {
+    firstgrade: 'FirstGrade',
+    secondgrade: 'SecondgrAde',
+    thirdgrade: 'tHirdgRade',
+    fourthgrade: 'foUrtHgradE',
+    fifthgrade: 'FiThgrAdE',
+    sixthgrade: 'SiXThgRade'
+};
+
+
+//console.log(passwords.firstgrade);
+
 const passwordPopUp = (event) => {
+    console.log('clicked');
+    let gradeLevel = $(event.target).attr('class');
+    console.log(gradeLevel);
+
     const password = prompt('Please enter the password your teacher gave you.', '');
-    if (password === 'FiRst') {
+
+    if (gradeLevel === 'grade1' && password === passwords.firstgrade) {
         console.log('correct');
-    } else {
+    } else if (gradeLevel === 'grade2' && password === passwords.secondgrade) {
+        console.log('correct');
+    } else if (gradeLevel === 'grade3' && password === passwords.thirdgrade) {
+        console.log('correct');
+    } else if (gradeLevel === 'grade4' && password === passwords.fourthgrade) {
+        console.log('correct');
+    } else if (gradeLevel === 'grade5' && password === passwords.fifthgrade) {
+        console.log('correct');
+    } else if (gradeLevel === 'grade6' && password === passwords.sixthgrade) {
+        console.log('correct');
+    } 
+    else {
         if ($('#wrong-password').html() === '') {
             $('#wrong-password').html('Wrong Password. Click on your class to try again.');
         }
@@ -101,14 +138,12 @@ const passwordPopUp = (event) => {
     }
 }
 
-class1.on('click', passwordPopUp);
+const requirePassword = () => {
+    for (classPassword of gradeArray) {
+        classPassword.on('click', passwordPopUp);
+    }
+}
 
 
 
-
-
-
-
-
-
-window.onload = showGrades;
+window.onload = showGrades, requirePassword();
