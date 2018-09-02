@@ -102,7 +102,6 @@ h2 {
 #enter-button:hover {
     background-color: #f9a825;
     transition: 0.3s;
-    cursor: pointer;
     font-size: 28px;
     height: 75px;
 }
