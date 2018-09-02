@@ -13,6 +13,7 @@ header {
     margin-left: 0;
     display: flex;
     justify-content: space-around;
+    box-shadow: 0px 2px 10px gray;
 }
 
 #top-nav {
