@@ -1,10 +1,19 @@
 //Hamburger menu animation
 const hamburgerMenu = (x) => {
     let menu = document.querySelector('#menu');
+
     if (menu.style.width === '') {
-        menu.style.width = '300px';
+        if (screen.width <= 350){
+            menu.style.width = '250px';
+        } else {
+            menu.style.width = '275px';
+        }
     } else if (menu.style.width === '0px') {
-        menu.style.width = '300px';
+        if (screen.width <= 350){
+            menu.style.width = '250px';
+        } else {
+            menu.style.width = '275px';
+        }
     } else {
         menu.style.width = '0px';
     }
@@ -52,8 +61,6 @@ const checkClasses = (x) => {
 
 const revealClassList = (event) => {
     let text = $(event.target).attr('class');
-    console.log(text);
-
     if (text === 'box1') {
         checkClasses(class1);
     } else if (text === 'box2') {
@@ -99,12 +106,12 @@ const sixth = $('.sixth');
 const gradeArray = [first, second, third, fourth, fifth, sixth];
 
 const passwords = {
-    firstgrade: 'FirstGrade',
-    secondgrade: 'SecondgrAde',
-    thirdgrade: 'tHirdgRade',
-    fourthgrade: 'foUrtHgradE',
-    fifthgrade: 'FiThgrAdE',
-    sixthgrade: 'SiXThgRade'
+    firstgrade: '1',
+    secondgrade: '2',
+    thirdgrade: '3',
+    fourthgrade: '4',
+    fifthgrade: '5',
+    sixthgrade: '6'
 };
 
 const passwordPopUp = (event) => {
@@ -130,6 +137,7 @@ const passwordPopUp = (event) => {
             $('#wrong-password').html('Wrong Password. Click on the button above to try again.');
         }
         event.preventDefault();
+        $('#show-content').html('Try Again');
         $('#card-container').hide();
     }
 }
@@ -152,6 +160,49 @@ const hideModules = () => {
 }
 /////////////////////////////////////////////////////////////////////
 
+/***** Module Pages ******/
+const [m1, m2, m3, m4, m5] = [$('.m-1'), $('.m-2'), $('.m-3'), $('.m-4'), $('.m-5')];
+const [mod1, mod2, mod3, mod4, mod5] = [$('.module-1'), $('.module-2'), $('.module-3'), $('.module-4'), $('.module-5')]
 
-window.onload = showGrades, requirePassword(), hideModules();
+const arrayOfModules = [m1, m2, m3, m4, m5];
+const showModules = [mod1, mod2, mod3, mod4, mod5];
 
+/*const getModule = (event) => {
+    let module = $(event.target).attr('class');
+    console.log(module);
+}*/
+
+const getModule = () => {
+    for (mods of arrayOfModules) {
+        mods.on('click', (event) => {
+            let text = $(event.target).attr('class');
+            if (text === 'm-1'){
+                mod1.toggle();
+                hideInactiveModules(m1);
+            } else if (text === 'm-2') {
+                mod2.toggle();
+                hideInactiveModules(m2);
+            } else if (text === 'm-3') {
+                mod3.toggle();
+                hideInactiveModules(m3);
+            } else if (text === 'm-4') {
+                mod4.toggle();
+                hideInactiveModules(m4);
+            } else if (text === 'm-5') {
+                mod5.toggle();
+                hideInactiveModules(m5);
+            }
+        });
+    }
+}
+
+const hideInactiveModules = (x) => {
+    for (hideMods of arrayOfModules) {
+        if (hideMods !== x){
+            hideMods.toggle();
+        }
+    }
+}
+
+
+window.onload = showGrades, requirePassword(), hideModules(), getModule();
