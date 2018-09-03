@@ -89,12 +89,12 @@ const backButton = () => {
 $('#back-button').on('click', backButton);
 
 /****************** Password Validation ******************/
-const first = $('.grade1');
-const second = $('.grade2');
-const third = $('.grade3');
-const fourth = $('.grade4');
-const fifth = $('.grade5');
-const sixth = $('.grade6');
+const first = $('.first');
+const second = $('.second');
+const third = $('.third');
+const fourth = $('.fourth');
+const fifth = $('.fifth');
+const sixth = $('.sixth');
 
 const gradeArray = [first, second, third, fourth, fifth, sixth];
 
@@ -109,27 +109,28 @@ const passwords = {
 
 const passwordPopUp = (event) => {
     let gradeLevel = $(event.target).attr('class');
-
+    console.log(gradeLevel);
     const password = prompt('Please enter the password your teacher gave you.', '');
 
-    if (gradeLevel === 'grade1' && password === passwords.firstgrade) {
-        console.log('correct');
-    } else if (gradeLevel === 'grade2' && password === passwords.secondgrade) {
-        console.log('correct');
-    } else if (gradeLevel === 'grade3' && password === passwords.thirdgrade) {
-        console.log('correct');
-    } else if (gradeLevel === 'grade4' && password === passwords.fourthgrade) {
-        console.log('correct');
-    } else if (gradeLevel === 'grade5' && password === passwords.fifthgrade) {
-        console.log('correct');
-    } else if (gradeLevel === 'grade6' && password === passwords.sixthgrade) {
-        console.log('correct');
+    if (gradeLevel === 'first' && password === passwords.firstgrade) {
+        passwordCorrect();
+    } else if (gradeLevel === 'second' && password === passwords.secondgrade) {
+        passwordCorrect();
+    } else if (gradeLevel === 'third' && password === passwords.thirdgrade) {
+        passwordCorrect();
+    } else if (gradeLevel === 'fourth' && password === passwords.fourthgrade) {
+        passwordCorrect();
+    } else if (gradeLevel === 'fifth' && password === passwords.fifthgrade) {
+        passwordCorrect();
+    } else if (gradeLevel === 'sixth' && password === passwords.sixthgrade) {
+        passwordCorrect();
     } 
     else {
-        if ($('#wrong-password').html() === '') {
-            $('#wrong-password').html('Wrong Password. Click on your class to try again.');
+        if ($('#wrong-password').html('')) {
+            $('#wrong-password').html('Wrong Password. Click on the button above to try again.');
         }
         event.preventDefault();
+        $('#card-container').hide();
     }
 }
 
@@ -138,7 +139,19 @@ const requirePassword = () => {
         classPassword.on('click', passwordPopUp);
     }
 }
+
+const passwordCorrect = () => {
+    $('#wrong-password').html('Login Successful!');
+    $('#wrong-password').css('color', 'black');
+    $('#card-container').show();
+    $('#show-content').hide();
+}
+
+const hideModules = () => {
+    $('#card-container').hide();
+}
 /////////////////////////////////////////////////////////////////////
 
 
-window.onload = showGrades, requirePassword();
+window.onload = showGrades, requirePassword(), hideModules();
+
