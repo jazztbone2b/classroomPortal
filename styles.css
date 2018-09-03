@@ -7,7 +7,7 @@ body {
 header {
     background-color: #2196f3;
     text-align: center;
-    height: 100px;
+    height: 80px;
     width: 100%;
     margin: auto;
     margin-left: 0;
@@ -30,6 +30,7 @@ a {
 
 h1 {
     color: white;
+    margin-left: -40px;
 }
 
 /****** Hamburger Menu *****/
@@ -54,6 +55,7 @@ h1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
     background-color: red;
+    margin-left: 300px;
 }
 
 .change .bar2 {opacity: 0;}
@@ -62,13 +64,15 @@ h1 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
     background-color: red;
+    margin-left: 300px;
 }
 
 #menu {
     background-color: #f9a825;
     width: 0px;
-    height: 90%;
-    position: absolute;
+    height: 100%;
+    margin-top: -79px;
+    position: fixed;
     z-index: 1;
     left: 0;
     overflow-x: hidden;
@@ -126,6 +130,18 @@ h2 {
     transition: 0.3s;
     font-size: 28px;
     height: 75px;
+}
+
+#welcome {
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    font-size: 20px;
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 1px 3px 3px gray;
+    padding: 10px;
 }
 
 /****** Class Page Flex Container ******/
@@ -215,6 +231,13 @@ h2 {
     text-align: center;
 }
 
+@media screen and (max-width: 800px) {
+    #welcome {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
 @media screen and (max-width: 600px) {
     #enter-button {
         font-size: 18px;
@@ -263,6 +286,6 @@ h2 {
     color: white;
     transition: 0.3s;
     box-shadow: 6px 12px 12px gray;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

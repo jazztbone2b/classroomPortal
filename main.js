@@ -141,5 +141,4 @@ const requirePassword = () => {
 /////////////////////////////////////////////////////////////////////
 
 
-
 window.onload = showGrades, requirePassword();
