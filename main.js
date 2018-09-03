@@ -131,8 +131,7 @@ const passwordPopUp = (event) => {
         passwordCorrect();
     } else if (gradeLevel === 'sixth' && password === passwords.sixthgrade) {
         passwordCorrect();
-    } 
-    else {
+    } else {
         if ($('#wrong-password').html('')) {
             $('#wrong-password').html('Wrong Password. Click on the button above to try again.');
         }
@@ -140,6 +139,7 @@ const passwordPopUp = (event) => {
         $('#show-content').html('Try Again');
         $('#card-container').hide();
     }
+    setTimeout(deleteLoginText, 1000);
 }
 
 const requirePassword = () => {
@@ -157,6 +157,10 @@ const passwordCorrect = () => {
 
 const hideModules = () => {
     $('#card-container').hide();
+}
+
+const deleteLoginText = () => {
+    $('#wrong-password').fadeOut();
 }
 /////////////////////////////////////////////////////////////////////
 

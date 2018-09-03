@@ -2,6 +2,8 @@ body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
     background-color: #eceff1;
+    height: 100%;
+    position: relative;
 }
 
 header {
@@ -33,6 +35,13 @@ h1 {
     margin-left: -40px;
 }
 
+p > a {
+    color: #2196f3;
+}
+
+li > a:hover {
+    color: white;
+}
 /****** Hamburger Menu *****/
 #hamburger-menu {
     display: inline;
@@ -57,6 +66,7 @@ h1 {
     background-color: red;
     margin-left: 280px;
     margin-top: -10px;
+    position: fixed;
 }
 
 .change .bar2 {opacity: 0;}
@@ -66,7 +76,8 @@ h1 {
     transform: rotate(45deg) translate(-8px, -8px);
     background-color: red;
     margin-left: 280px;
-    margin-top: 0px;
+    margin-top: -4px;
+    position: fixed;
 }
 
 #menu {
@@ -95,7 +106,6 @@ h1 {
 #menu > li:hover {
     cursor: pointer;
     background-color: #2196f3;
-    color: white;
     border-left: 5px solid #ffff00;
     transition: 0.3s;
 }
@@ -130,8 +140,8 @@ h2 {
 #enter-button:hover {
     background-color: #f9a825;
     transition: 0.3s;
-    font-size: 28px;
-    height: 75px;
+    font-size: 25px;
+    height: 55px;
 }
 
 #welcome {
@@ -291,7 +301,9 @@ h2 {
 
 #card-container {
     max-width: 800px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -337,4 +349,21 @@ h2 {
 .module-1, .module-2, .module-3, .module-4, .module-5, .module-6 {
     display: none;
     height: 600px;
+}
+
+/****** Footer ******/
+#footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    background-color: #1565c0;
+    text-align: center;
+    justify-content: center;
+}
+
+#footer > a{
+    color: white;
 }
