@@ -39,9 +39,6 @@ p > a {
     color: #1565c0;
 }
 
-ul {
-    list-style: none;
-}
 li > a:hover {
     color: white;
 }
@@ -330,7 +327,6 @@ h2 {
 
 #card:hover {
     cursor: pointer;
-    background-color: #f9a825;
     transition: 0.3s;
     box-shadow: 6px 12px 12px gray;
     font-size: 36px;
