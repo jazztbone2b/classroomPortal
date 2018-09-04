@@ -331,8 +331,7 @@ h2 {
     background-color: #f9a825;
     transition: 0.3s;
     box-shadow: 6px 12px 12px gray;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    font-size: 36px;
 }
 
 /****** Modules ******/
