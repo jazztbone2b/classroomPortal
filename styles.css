@@ -39,6 +39,9 @@ p > a {
     color: #1565c0;
 }
 
+ul {
+    list-style: none;
+}
 li > a:hover {
     color: white;
 }
