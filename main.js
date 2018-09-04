@@ -121,16 +121,22 @@ const passwordPopUp = (event) => {
 
     if (gradeLevel === 'first' && password === passwords.firstgrade) {
         passwordCorrect();
+        setTimeout(deleteLoginText, 1000);
     } else if (gradeLevel === 'second' && password === passwords.secondgrade) {
         passwordCorrect();
+        setTimeout(deleteLoginText, 1000);
     } else if (gradeLevel === 'third' && password === passwords.thirdgrade) {
         passwordCorrect();
+        setTimeout(deleteLoginText, 1000);
     } else if (gradeLevel === 'fourth' && password === passwords.fourthgrade) {
         passwordCorrect();
+        setTimeout(deleteLoginText, 1000);
     } else if (gradeLevel === 'fifth' && password === passwords.fifthgrade) {
         passwordCorrect();
+        setTimeout(deleteLoginText, 1000);
     } else if (gradeLevel === 'sixth' && password === passwords.sixthgrade) {
         passwordCorrect();
+        setTimeout(deleteLoginText, 1000);
     } else {
         if ($('#wrong-password').html('')) {
             $('#wrong-password').html('Wrong Password. Click on the button above to try again.');
@@ -139,7 +145,6 @@ const passwordPopUp = (event) => {
         $('#show-content').html('Try Again');
         $('#card-container').hide();
     }
-    setTimeout(deleteLoginText, 1000);
 }
 
 const requirePassword = () => {
@@ -170,11 +175,6 @@ const [mod1, mod2, mod3, mod4, mod5] = [$('.module-1'), $('.module-2'), $('.modu
 
 const arrayOfModules = [m1, m2, m3, m4, m5];
 const showModules = [mod1, mod2, mod3, mod4, mod5];
-
-/*const getModule = (event) => {
-    let module = $(event.target).attr('class');
-    console.log(module);
-}*/
 
 const getModule = () => {
     for (mods of arrayOfModules) {
