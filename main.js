@@ -18,7 +18,7 @@ const hamburgerMenu = (x) => {
         menu.style.width = '0px';
     }
 
-    menu.style.transition = '0.6s';
+    menu.style.transition = '0.4s';
     x.classList.toggle('change');
 }
 
