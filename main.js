@@ -23,9 +23,37 @@ const hamburgerMenu = (x) => {
     x.classList.toggle('change');
 }
 
-const resources = $('#resources');
+/****** Side Menu HTML ******/
+const sideMenu = document.querySelector('#menu');
+
+const menuHTML = `
+<li><a href="index.html">Home</a></li>
+<li id="toggle-resources" onclick="toggleResources()">Resources</li>
+    <ul id="resources">
+        <li id="reslist">Levels of proficiency</li>
+        <li>Standards</li>
+        <li>Expectations</li>
+        <li>Importance of Second Language Learning</li>
+        <li>Cool websites to practice Spanish</li>
+    </ul>
+<li>Grading</li>
+<li>Communication with families</li>
+<li><a href="https://www.youtube.com/channel/UCIs6o8SEFuIYOgd7E-LCwgg" target="_blank">YouTube Channel</a></li>
+<li>YouTube Channel proposals</li>
+<li>Music</li>
+<li>Missions</li>
+<li>Student of the month</li>
+<li>Class Job Postings</li>
+<li> Job applications and interview process</li>
+<li>Summer in Peru</li>
+<li>Contact</li>`;
+
+const fillMenu = () => {
+    sideMenu.innerHTML = menuHTML;
+}
+
 const toggleResources = () => {
-    resources.slideToggle();
+    $('#resources').slideToggle();
 }
 
 ////////////////////// variables ///////////////////////////////
@@ -221,4 +249,4 @@ const hideInactiveModules = (x) => {
 }
 
 
-window.onload = showGrades, requirePassword(), hideModules(), getModule();
+window.onload = fillMenu(), showGrades(), requirePassword(), hideModules(), getModule();
