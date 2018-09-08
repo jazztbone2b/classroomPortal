@@ -287,8 +287,7 @@ h2 {
     }
 
     #box:hover {
-        width: 160px;
-        height: 160px;
+        font-size: 22px;
     }
 
     #back-button {
