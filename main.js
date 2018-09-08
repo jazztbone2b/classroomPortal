@@ -1,4 +1,4 @@
-//Hamburger menu animation
+//Hamburger menu
 const hamburgerMenu = (x) => {
     let menu = document.querySelector('#menu');
 
@@ -16,10 +16,16 @@ const hamburgerMenu = (x) => {
         }
     } else {
         menu.style.width = '0px';
+        $('#resources').slideUp();
     }
 
     menu.style.transition = '0.4s';
     x.classList.toggle('change');
+}
+
+const resources = $('#resources');
+const toggleResources = () => {
+    resources.slideToggle();
 }
 
 ////////////////////// variables ///////////////////////////////
@@ -29,6 +35,7 @@ const grade3 = $('.box3');
 const grade4 = $('.box4');
 const grade5 = $('.box5');
 const grade6 = $('.box6');
+const gradeEsl = $('.esl'); 
 
 const class1 = $('.first-grade');
 const class2 = $('.second-grade');
@@ -41,7 +48,7 @@ const back = $('#back-button');
 
 ////////////////////////////////////////////////////////////////
 
-let arrayOfGrades = [grade1, grade2, grade3, grade4, grade5, grade6];
+let arrayOfGrades = [grade1, grade2, grade3, grade4, grade5, grade6, gradeEsl];
 
 let arrayOfClasses = [class1, class2, class3, class4, class5, class6];
 
@@ -102,8 +109,9 @@ const third = $('.third');
 const fourth = $('.fourth');
 const fifth = $('.fifth');
 const sixth = $('.sixth');
+const esl = $('.eslClass');
 
-const gradeArray = [first, second, third, fourth, fifth, sixth];
+const gradeArray = [first, second, third, fourth, fifth, sixth, esl];
 
 const passwords = {
     firstgrade: '1',
@@ -111,7 +119,8 @@ const passwords = {
     thirdgrade: '3',
     fourthgrade: '4',
     fifthgrade: '5',
-    sixthgrade: '6'
+    sixthgrade: '6',
+    eslClass: 'esl'
 };
 
 const passwordPopUp = (event) => {
@@ -135,6 +144,9 @@ const passwordPopUp = (event) => {
         passwordCorrect();
         setTimeout(deleteLoginText, 1000);
     } else if (gradeLevel === 'sixth' && password === passwords.sixthgrade) {
+        passwordCorrect();
+        setTimeout(deleteLoginText, 1000);
+    } else if (gradeLevel === 'eslClass' && password === passwords.eslClass){
         passwordCorrect();
         setTimeout(deleteLoginText, 1000);
     } else {
