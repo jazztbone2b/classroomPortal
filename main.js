@@ -36,10 +36,10 @@ const menuHTML = `
         <li>Importance of Second Language Learning</li>
         <li>Cool websites to practice Spanish</li>
     </ul>
-<li>Grading</li>
+<li><a href="grading.html">Grading</a></li>
 <li><a href="famCommunication.html">Communication with families</a></li>
 <li><a href="https://www.youtube.com/channel/UCIs6o8SEFuIYOgd7E-LCwgg" target="_blank">YouTube Channel</a></li>
-<li>YouTube Channel proposals</li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc9e36lTpNLNHUyQZkG3TLqZkOSNGpf2KJGNzOApmuWa0OMcQ/viewform" target="_blank">YouTube Channel proposals</a></li>
 <li>Music</li>
 <li>Missions</li>
 <li>Student of the month</li>
