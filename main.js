@@ -30,14 +30,14 @@ const menuHTML = `
 <li><a href="index.html">Home</a></li>
 <li id="toggle-resources" onclick="toggleResources()">Resources</li>
     <ul id="resources">
-        <li id="reslist">Levels of proficiency</li>
-        <li>Standards</li>
-        <li>Expectations</li>
+        <li id="reslist"><a href="levelsOfProficiency.html">Levels of proficiency</a></li>
+        <li><a href="canDo.html">Can-do Statements</a></li>
+        <li><a href="expectations.html">Program Expectations</a></li>
         <li>Importance of Second Language Learning</li>
         <li>Cool websites to practice Spanish</li>
     </ul>
 <li>Grading</li>
-<li>Communication with families</li>
+<li><a href="famCommunication.html">Communication with families</a></li>
 <li><a href="https://www.youtube.com/channel/UCIs6o8SEFuIYOgd7E-LCwgg" target="_blank">YouTube Channel</a></li>
 <li>YouTube Channel proposals</li>
 <li>Music</li>
