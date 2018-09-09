@@ -460,13 +460,6 @@ h2 {
     line-height: 2;
 }
 
-#prof-scale {
-    text-align: center;
-}
-
-#prof-scale > ul {
-    list-style: none;
-}
 #class-dojo {
     max-width: 800px;
     display: flex;
