@@ -180,16 +180,41 @@ h2 {
     height: 55px;
 }
 
-#welcome {
-    margin-top: 25px;
+#content-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
     margin-left: auto;
     margin-right: auto;
+}
+
+#welcome {
+    margin-top: 25px;
     margin-bottom: 25px;
     font-size: 20px;
     max-width: 800px;
     background-color: white;
-    box-shadow: 1px 3px 3px gray;
+    box-shadow: 2px 6px 6px gray;
     padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#video {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+iframe {
+    width: 600px;
+    height: 400px;
+    margin-left: 20px;
+    border: none;
+    box-shadow: 2px 6px 6px gray;
 }
 
 /****** Class Page Flex Container ******/
@@ -294,6 +319,12 @@ h2 {
         margin-left: 10px;
         margin-right: 10px;
     }
+    iframe {
+        width: 480px;
+        height: 370px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -317,6 +348,17 @@ h2 {
     #back-button {
         width: 75px;
         height: 75px;
+    }
+    iframe {
+        width: 360px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    iframe {
+        width: 310px;
+        height: 200px;
     }
 }
 
