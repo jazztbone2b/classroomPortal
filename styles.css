@@ -214,20 +214,19 @@ h2 {
 }
 
 #video {
-    display: flex;
-    flex-direction: column;
     margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
-    justify-content: space-between;
 }
 
 iframe {
-    width: 600px;
-    height: 400px;
-    margin-left: 20px;
+    width: 800px;
+    height: 480px;
     border: none;
     box-shadow: 2px 6px 6px gray;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
 }
 
 /****** Class Page Flex Container ******/
@@ -334,6 +333,10 @@ iframe {
         margin-right: 10px;
     }
     #prof-scale {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #web-card, #title-card {
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -466,6 +469,7 @@ iframe {
     background-color: #1565c0;
     text-align: center;
     justify-content: center;
+    box-shadow: 0px 0px 1px grey;
 }
 
 #footer > a{
@@ -532,7 +536,7 @@ iframe {
 }
 
 #class-dojo > a {
-    color: #2196f3
+    color: #2196f3;
 }
 
 #class-dojo > a:hover {
@@ -583,5 +587,43 @@ figure > img {
     background-color: white;
     border-radius: 5px;
     box-shadow: 3px 6px 6px gray;
+    margin-bottom: 20px;
+}
+
+#title-card {
+    max-width: 800px;
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 3px 6px 6px gray;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #f9a825;
+    color: white;
+}
+
+#web-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    height: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 3px 6px 6px gray;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+#web-card:hover {
+    background-color: #2196f3;
+    transition: 0.3s;
+    box-shadow: 16px 32px 32px gray;
+    color: white;
+}
+
+#benefit-video {
+    margin-top: 10px;
     margin-bottom: 20px;
 }

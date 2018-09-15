@@ -34,8 +34,8 @@ const menuHTML = `
         <li><a href="canDo.html">Can-do Statements</a></li>
         <li><a href="expectations.html">Program Expectations</a></li>
         <li><a href="spanish-enrichment.html">Spanish Enrichment</a></li>
-        <li>Importance of Second Language Learning</li>
-        <li>Cool websites to practice Spanish</li>
+        <li><a href="imp-second-lang.html">Importance of Second Language Learning</a></li>
+        <li><a href="spanish-websites.html">Cool websites to practice Spanish</a></li>
     </ul>
 <li><a href="esl-resources.html">ESL Resources</a></li>
 <li><a href="grading.html">Grading</a></li>
