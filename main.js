@@ -42,11 +42,10 @@ const menuHTML = `
 <li><a href="famCommunication.html">Communication with families</a></li>
 <li><a href="https://www.youtube.com/channel/UCIs6o8SEFuIYOgd7E-LCwgg" target="_blank">YouTube Channel</a></li>
 <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc9e36lTpNLNHUyQZkG3TLqZkOSNGpf2KJGNzOApmuWa0OMcQ/viewform" target="_blank">YouTube Channel proposals</a></li>
-<li>Music</li>
+<li><a href="music-and-videos.html">Music and Videos</a></li>
 <li><a href="missions.html">Missions</a></li>
 <li><a href="student-of-the-month.html">Student of the month</a></li>
-<li><a href="student-jobs.html">Class Job Postings</a></li>
-<li> Job applications and interview process</li>
+<li><a href="student-jobs.html">Class Job Postings and Interview Process</a></li>
 <li>Summer in Peru</li>
 <li><a href="about-me.html">About Me</a></li>
 <li><a href="contact.html">Contact</a></li>`;
