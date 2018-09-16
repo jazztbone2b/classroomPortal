@@ -345,6 +345,9 @@ iframe {
         width: 95%;
         height: 350px;
     }
+    #gallery {
+        width: 95%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -714,4 +717,9 @@ figure > img {
 #job-underline {
     border-bottom: 2px solid black;
     width: 50%;
+}
+
+#test-image {
+    width: 100%;
+    margin-top: 10px;
 }
