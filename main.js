@@ -43,9 +43,9 @@ const menuHTML = `
 <li><a href="https://www.youtube.com/channel/UCIs6o8SEFuIYOgd7E-LCwgg" target="_blank">YouTube Channel</a></li>
 <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc9e36lTpNLNHUyQZkG3TLqZkOSNGpf2KJGNzOApmuWa0OMcQ/viewform" target="_blank">YouTube Channel proposals</a></li>
 <li>Music</li>
-<li>Missions</li>
+<li><a href="missions.html">Missions</a></li>
 <li><a href="student-of-the-month.html">Student of the month</a></li>
-<li>Class Job Postings</li>
+<li><a href="student-jobs.html">Class Job Postings</a></li>
 <li> Job applications and interview process</li>
 <li>Summer in Peru</li>
 <li><a href="about-me.html">About Me</a></li>
@@ -251,5 +251,11 @@ const hideInactiveModules = (x) => {
     }
 }
 
+/****** Toggle Spanish Websites ******/
+const [vocab, classProjects] = [$('#vocab'), $('#class-projects')];
+const [vocabCard, projectCard] = [$('.vocab-card'), $('.project-card')];
+
+vocabCard.click(() => vocab.slideToggle(500));
+projectCard.click(() => classProjects.slideToggle(500));
 
 window.onload = fillMenu(), showGrades(), requirePassword(), hideModules(), getModule();
