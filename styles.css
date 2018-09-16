@@ -619,7 +619,7 @@ figure > img {
 }
 
 .spin-arrow {
-    transform: rotateZ(-360deg);
+    transform: rotateZ(-180deg);
 }
 
 .project-card:hover {
