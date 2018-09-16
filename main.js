@@ -254,7 +254,10 @@ const hideInactiveModules = (x) => {
 const [vocab, classProjects] = [$('#vocab'), $('#class-projects')];
 const [vocabCard, projectCard] = [$('.vocab-card'), $('.project-card')];
 
-vocabCard.click(() => vocab.slideToggle(500));
-projectCard.click(() => classProjects.slideToggle(500));
+const flipArrow = (x) => {
+    x.toggleClass('spin-arrow');
+}
+vocabCard.click(() => vocab.slideToggle(500, flipArrow($('#arrow-1'))));
+projectCard.click(() => classProjects.slideToggle(500, flipArrow($('#arrow-2'))));
 
 window.onload = fillMenu(), showGrades(), requirePassword(), hideModules(), getModule();
