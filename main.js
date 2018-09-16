@@ -44,11 +44,12 @@ const menuHTML = `
 <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSc9e36lTpNLNHUyQZkG3TLqZkOSNGpf2KJGNzOApmuWa0OMcQ/viewform" target="_blank">YouTube Channel proposals</a></li>
 <li>Music</li>
 <li>Missions</li>
-<li>Student of the month</li>
+<li><a href="student-of-the-month.html">Student of the month</a></li>
 <li>Class Job Postings</li>
 <li> Job applications and interview process</li>
 <li>Summer in Peru</li>
-<li>Contact</li>`;
+<li><a href="about-me.html">About Me</a></li>
+<li><a href="contact.html">Contact</a></li>`;
 
 const fillMenu = () => {
     sideMenu.innerHTML = menuHTML;
