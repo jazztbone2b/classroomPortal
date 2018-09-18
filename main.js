@@ -46,7 +46,7 @@ const menuHTML = `
 <li><a href="missions.html">Missions</a></li>
 <li><a href="student-of-the-month.html">Student of the month</a></li>
 <li><a href="student-jobs.html">Class Job Postings and Interview Process</a></li>
-<li>Summer in Peru</li>
+<li><a href="summer-in-peru.html">Summer in Peru</a></li>
 <li><a href="about-me.html">About Me</a></li>
 <li><a href="contact.html">Contact</a></li>`;
 
