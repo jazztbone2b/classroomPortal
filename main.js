@@ -28,7 +28,10 @@ const sideMenu = document.querySelector('#menu');
 
 const menuHTML = `
 <li><a href="index.html">Home</a></li>
-<li id="toggle-resources" onclick="toggleResources()">Spanish Resources</li>
+<li id="toggle-resources" onclick="toggleResources()">
+    <div>Spanish Resources</div>
+    <div id="drop-down-arrow">&#9662;</div>
+    </li>
     <ul id="resources">
         <li id="reslist"><a href="levelsOfProficiency.html">Levels of proficiency</a></li>
         <li><a href="canDo.html">Can-do Statements</a></li>
@@ -56,7 +59,9 @@ const fillMenu = () => {
 
 const toggleResources = () => {
     $('#resources').slideToggle();
+    $('#drop-down-arrow').toggleClass('spin-arrow');
 }
+
 
 ////////////////////// variables ///////////////////////////////
 const grade1 = $('.box1');
@@ -256,10 +261,9 @@ const [vocabCard, projectCard] = [$('.vocab-card'), $('.project-card')];
 
 const flipArrow = (x) => {
     x.toggleClass('spin-arrow');
+    console.log(x);
 }
-vocabCard.click(() => {
-
-vocab.slideToggle(500, flipArrow($('#arrow-1')))});
+vocabCard.click(() => vocab.slideToggle(500, flipArrow($('#arrow-1'))));
 projectCard.click(() => classProjects.slideToggle(500, flipArrow($('#arrow-2'))));
 
 window.onload = fillMenu(), showGrades(), requirePassword(), hideModules(), getModule();
